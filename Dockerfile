@@ -1,6 +1,7 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/tensorflow-notebook:tensorflow-2.4.1
 
 # Add RUN statements to install packages as the $NB_USER defined in the base images.
+RUN pip install 'd2l==0.16.3'
 
 # Add a "USER root" statement followed by RUN statements to install system packages using apt-get,
 # change file permissions, etc.
